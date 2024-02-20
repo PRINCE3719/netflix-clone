@@ -1,0 +1,57 @@
+.sub-div {
+    padding-top: 100px;
+    padding: 100px 30px;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-div {
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.sub-div h1 {
+    text-align: left;
+    font-size: 50px;
+    width: 46vw;
+}
+
+.movie-d {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 550;
+}
+
+#color-grn{
+    color: #46d369;
+}
+.detail-bttn button{
+    float: left;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 0.2rem;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.detail-bttn{
+    display: flex;
+    gap: 10px;
+}
+#playlist{
+    background-color: #333;
+    color: #fff;
+   
+}
+#description{
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+#genres{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999;
+}

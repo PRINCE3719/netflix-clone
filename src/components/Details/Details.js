@@ -29,6 +29,8 @@ export default function Details() {
     <div>
       <Head />
       <Moviedata movielist = {moviedata}/>
+      
+
     </div>
   )
 

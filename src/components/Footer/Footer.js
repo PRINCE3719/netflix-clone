@@ -4,6 +4,7 @@ import "../css/Footer.css"
 export default function Footer() {
   return (
     <div className='footer-body'>
+        <div class="line"></div>
       <div className="footer-sec">
             <div className="footer-in">
                 <p id='footer-q'>Questions? Call <a href="#">000-800-919-1694</a></p>

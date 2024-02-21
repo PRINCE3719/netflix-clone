@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Head from '../Header/Head';
 import Moviedata from '../Moviedata/Moviedata';
 
+import Footer from '../Footer/Footer';
+import Originals from '../MovieList/Originals';
+
 
 export default function Details() {
   const [moviedata , setmoviedata] = useState();
@@ -26,9 +29,11 @@ export default function Details() {
   
   },[])
   return (
-    <div>
+    <div style={{backgroundColor:"black"}}>
       <Head />
       <Moviedata movielist = {moviedata}/>
+      <Originals/>
+      <Footer/>
       
 
     </div>

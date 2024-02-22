@@ -19,9 +19,7 @@ const Head = ({Moviename}) => {
     const search = (e)=>{
         setsearchitem(e.target.value)
         setdisplay(true);
-        return(
-            <div></div>
-        )
+      
     }
     return (
         <div className='main-head'>

@@ -17,6 +17,7 @@ ul{
     margin: 0 20px;
     gap: 20px;
     font-size: 16px;
+    cursor: pointer;
 }
 #search-input{
     padding: 5px;

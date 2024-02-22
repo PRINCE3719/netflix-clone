@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import './Originals.css'
 
+const APIKEY="74f6531ebb590d3759cba03b3258591f";
+const api= `https://api.themoviedb.org/3/discover/movie?with_genres=36&api_key=${APIKEY}`;
 
-const APIKEY = "74f6531ebb590d3759cba03b3258591f";
-const api = `https://api.themoviedb.org/3/discover/tv?with_networks=213&api_key=${APIKEY}`;
+export default function History() {
 
-export default function Originals() {
+    const [movielist,setmovielist] = useState([]);
+    const [scroll,setscroll] = useState(0);
 
-    const [movielist, setmovielist] = useState([]);
-    const [scroll, setscroll] = useState(0);
- 
-
-    const leftarrow = () => {
-        let x = scroll + Math.round(window.innerWidth / 2);
-        if (x > 0) {
+    const leftarrow = ()=>{
+        let x= scroll + Math.round(window.innerWidth / 2);
+        if(x > 0){
             x = 0;
         }
         setscroll(x);
@@ -23,30 +20,20 @@ export default function Originals() {
         let x = scroll - Math.round(window.innerWidth / 2);
         let listW = movielist.results?.length * 200;
         if (window.innerWidth - listW > x) {
-            x = window.innerWidth - listW - 60;
+          x = window.innerWidth - listW - 60;
         }
         setscroll(x);
-    };
-
-
-    useEffect(() => {
-        fetch(api, { method: "GET" })
-            .then((res) => res.json())
-            .then((data) => {
-                setmovielist(data);
-            })
-           
-            
-    }, [])
-
-
-
-
-
-
-    return (
-        <div className='horizontal-list'>
-            <h3 id='m-title'>Netflix Originals</h3>
+      };
+      useEffect(()=>{
+        fetch(api,{method:"GET"})
+        .then((res)=>res.json())
+        .then((data)=>{
+            setmovielist(data);
+        })
+    },[])
+  return (
+    <div className='horizontal-list'>
+            <h3 id='m-title'>History</h3>
             <div className='left-arrow'>
                 <img src='https://img.icons8.com/ios-glyphs/50/FFFFFF/chevron-left.png' alt='' onClick={leftarrow} />
             </div>
@@ -65,5 +52,5 @@ export default function Originals() {
             </div>
 
         </div>
-    )
+  )
 }

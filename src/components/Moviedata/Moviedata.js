@@ -46,9 +46,7 @@ const Moviedata = ({ movielist }) => {
         return text.substr(0, text.lastIndexOf(" ", maxLength)) + "...";
     };
 
-
-
-    console.log(originalData);
+  
 
 
 
